@@ -1,0 +1,369 @@
+
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ===== Reset CSS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links li.active a,
+.nav-links a:hover {
+    color: red;
+}
+
+.nav-links .ctn {
+    background: red;
+    padding: 12px 22px;
+    border-radius: 30px;
+    color: white;
+}
+
+.menu-btn {
+    display: none;
+    width: 35px;
+    cursor: pointer;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("image/image8.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 850px;
+    color: white;
+    padding-top: 70px;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+}
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: red;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 20px 0 30px;
+}
+
+.ctn {
+    display: inline-block;
+    background: red;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.ctn:hover {
+    background: darkred;
+}
+
+/* ===== Events Section ===== */
+.events {
+    width: 90%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 35px;
+    color: #222;
+}
+
+.events .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.events .col {
+    width: 45%;
+    text-align: center;
+}
+
+.events .col img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.events .col h4 {
+    font-size: 22px;
+    margin: 20px 0 10px;
+}
+
+.events .col p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* ===== Explore Section ===== */
+.explore {
+    width: 100%;
+    min-height: 600px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("image/image5.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.explore-content {
+    width: 80%;
+    max-width: 700px;
+    color: white;
+}
+
+.explore-content h1 {
+    font-size: 40px;
+    color: white;
+}
+
+.explore-content p {
+    line-height: 1.8;
+    margin: 25px 0;
+    color: white;
+}
+
+/* ===== Tours Section ===== */
+.tours {
+    width: 90%;
+    margin: 100px auto;
+}
+
+.tours .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.tours .col {
+    width: 50%;
+}
+
+.content-col h1 {
+    font-size: 35px;
+    color: #222;
+}
+
+.content-col .line {
+    margin: 15px 0;
+}
+
+.content-col p {
+    color: #666;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ===== Footer Section ===== */
+.footer {
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-content p {
+    line-height: 1.8;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* ===== Tablet & Mobile Responsive ===== */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.mobile-menu {
+        display: flex;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 220px;
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px;
+        background: #222;
+        border-radius: 10px;
+    }
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .events .row,
+    .tours .row {
+        flex-direction: column;
+    }
+
+    .events .col,
+    .tours .col {
+        width: 100%;
+    }
+
+    .title h1,
+    .content-col h1 {
+        font-size: 27px;
+    }
+
+    .explore {
+        min-height: 500px;
+    }
+
+    .explore-content h1 {
+        font-size: 30px;
+    }
+
+    .image-gallery img {
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 26px;
+    }
+
+    .hero-content h2 {
+        font-size: 17px;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .image-gallery img {
+        height: 220px;
+    }
+}
+
+ 
